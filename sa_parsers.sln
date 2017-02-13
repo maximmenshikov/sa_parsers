@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clang_parser", "clang_parser\clang_parser.csproj", "{03E507ED-5234-4201-AB44-CADFC65D591F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cppcheck_parser", "cppcheck_parser\cppcheck_parser.csproj", "{EF5C589D-5C8C-4BDE-9B1D-465EAF3F941D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "framac_parser", "framac_parser\framac_parser.csproj", "{33D4585C-B2C9-466D-BE42-E29EC32B096B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pvs_parser", "pvs_parser\pvs_parser.csproj", "{E1EDED73-D520-491F-952B-58FD43376ECA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "report_cleanup", "report_cleanup\report_cleanup.csproj", "{E4F254FD-FEBC-438A-AD17-6F81BEC3C338}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03E507ED-5234-4201-AB44-CADFC65D591F}.Debug|x86.ActiveCfg = Debug|x86
+		{03E507ED-5234-4201-AB44-CADFC65D591F}.Debug|x86.Build.0 = Debug|x86
+		{03E507ED-5234-4201-AB44-CADFC65D591F}.Release|x86.ActiveCfg = Release|x86
+		{03E507ED-5234-4201-AB44-CADFC65D591F}.Release|x86.Build.0 = Release|x86
+		{33D4585C-B2C9-466D-BE42-E29EC32B096B}.Debug|x86.ActiveCfg = Debug|x86
+		{33D4585C-B2C9-466D-BE42-E29EC32B096B}.Debug|x86.Build.0 = Debug|x86
+		{33D4585C-B2C9-466D-BE42-E29EC32B096B}.Release|x86.ActiveCfg = Release|x86
+		{33D4585C-B2C9-466D-BE42-E29EC32B096B}.Release|x86.Build.0 = Release|x86
+		{E1EDED73-D520-491F-952B-58FD43376ECA}.Debug|x86.ActiveCfg = Debug|x86
+		{E1EDED73-D520-491F-952B-58FD43376ECA}.Debug|x86.Build.0 = Debug|x86
+		{E1EDED73-D520-491F-952B-58FD43376ECA}.Release|x86.ActiveCfg = Release|x86
+		{E1EDED73-D520-491F-952B-58FD43376ECA}.Release|x86.Build.0 = Release|x86
+		{E4F254FD-FEBC-438A-AD17-6F81BEC3C338}.Debug|x86.ActiveCfg = Debug|x86
+		{E4F254FD-FEBC-438A-AD17-6F81BEC3C338}.Debug|x86.Build.0 = Debug|x86
+		{E4F254FD-FEBC-438A-AD17-6F81BEC3C338}.Release|x86.ActiveCfg = Release|x86
+		{E4F254FD-FEBC-438A-AD17-6F81BEC3C338}.Release|x86.Build.0 = Release|x86
+		{EF5C589D-5C8C-4BDE-9B1D-465EAF3F941D}.Debug|x86.ActiveCfg = Debug|x86
+		{EF5C589D-5C8C-4BDE-9B1D-465EAF3F941D}.Debug|x86.Build.0 = Debug|x86
+		{EF5C589D-5C8C-4BDE-9B1D-465EAF3F941D}.Release|x86.ActiveCfg = Release|x86
+		{EF5C589D-5C8C-4BDE-9B1D-465EAF3F941D}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal
