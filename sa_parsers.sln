@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pvs_parser", "pvs_parser\pv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "report_cleanup", "report_cleanup\report_cleanup.csproj", "{E4F254FD-FEBC-438A-AD17-6F81BEC3C338}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "resharper_parser", "resharper_parser\resharper_parser.csproj", "{176B30AF-DD0A-422C-B02A-D8F8D4CB7AF7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -21,6 +23,10 @@ Global
 		{03E507ED-5234-4201-AB44-CADFC65D591F}.Debug|x86.Build.0 = Debug|x86
 		{03E507ED-5234-4201-AB44-CADFC65D591F}.Release|x86.ActiveCfg = Release|x86
 		{03E507ED-5234-4201-AB44-CADFC65D591F}.Release|x86.Build.0 = Release|x86
+		{176B30AF-DD0A-422C-B02A-D8F8D4CB7AF7}.Debug|x86.ActiveCfg = Debug|x86
+		{176B30AF-DD0A-422C-B02A-D8F8D4CB7AF7}.Debug|x86.Build.0 = Debug|x86
+		{176B30AF-DD0A-422C-B02A-D8F8D4CB7AF7}.Release|x86.ActiveCfg = Release|x86
+		{176B30AF-DD0A-422C-B02A-D8F8D4CB7AF7}.Release|x86.Build.0 = Release|x86
 		{33D4585C-B2C9-466D-BE42-E29EC32B096B}.Debug|x86.ActiveCfg = Debug|x86
 		{33D4585C-B2C9-466D-BE42-E29EC32B096B}.Debug|x86.Build.0 = Debug|x86
 		{33D4585C-B2C9-466D-BE42-E29EC32B096B}.Release|x86.ActiveCfg = Release|x86
