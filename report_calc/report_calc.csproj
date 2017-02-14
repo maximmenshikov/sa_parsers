@@ -19,7 +19,7 @@
     <WarningLevel>4</WarningLevel>
     <Externalconsole>true</Externalconsole>
     <PlatformTarget>x86</PlatformTarget>
-    <Commandlineparameters>/home/mmenshchikov/work/bugs/sa_comparison_003/03.scored/resharper_scored.txt /home/mmenshchikov/work/bugs/sa_comparison_003/itc-benchmarks</Commandlineparameters>
+    <Commandlineparameters>/home/mmenshchikov/work/bugs/sa_comparison_003_final/03.evaluated/pvs_evaluated.txt /home/mmenshchikov/work/bugs/sa_comparison_003_final/itc-benchmarks</Commandlineparameters>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <DebugType>full</DebugType>

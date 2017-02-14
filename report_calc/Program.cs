@@ -142,9 +142,13 @@ namespace report_calc
             if (!incomplete)
             {
                 var tp = errorLines.Where((a) => a.Value.True).Select((a) => a.Value.Calculate(ref weights)).Sum();
+                var tp_old = errorLines.Where((a) => a.Value.True).Select((a) => a.Value.Calculate(ref weights)).Where((a) => a > 0.0).Count();
+
                 var fp = errorLines.Where((a) => !a.Value.True).Select((a) => a.Value.Calculate(ref weights)).Sum();
-                Console.WriteLine("TP: " + tp + " / " + errorLines.Where((a) => a.Value.True).Count());
-                Console.WriteLine("FP: " + fp + " / " + errorLines.Where((a) => !a.Value.True).Count());
+                var fp_old = errorLines.Where((a) => !a.Value.True).Select((a) => a.Value.Calculate(ref weights)).Where((a) => a > 0.0).Count();
+
+                Console.WriteLine("TP: " + tp + "(" + tp_old + ") / " + errorLines.Where((a) => a.Value.True).Count());
+                Console.WriteLine("FP: " + fp + "(" + fp_old + ") / " + errorLines.Where((a) => !a.Value.True).Count());
                 Console.WriteLine("TP/(TP + FP): " + Math.Round(tp / (tp + fp) * 100, 2) + "%");
                 Console.WriteLine();
             }
