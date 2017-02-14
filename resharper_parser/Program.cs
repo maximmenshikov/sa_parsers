@@ -52,25 +52,27 @@ namespace resharper_parser
                 var error = line.Substring(line.IndexOf(" ") + 1);
                 var filePath = line.Substring(0, line.IndexOf(" ")).Replace(@"..\", "").Replace(@"\", "/");
 
-                Console.WriteLine(filePath);
-                Console.WriteLine("resharper:");
-                Console.WriteLine("What? " + error);
-                Console.WriteLine("When? -");
-                Console.WriteLine("Where? File, line");
-                Console.WriteLine("Who? -");
-                Console.WriteLine("Why? -");
-
-                if (inspectionsWithFixes.Where((a) => error.ToLower().Contains(a.ToLower())).Count() > 0)
+                if (!error.Contains("deprecated"))
                 {
-                    Console.WriteLine("How to fix? Solution provided.");
-                }
-                else
-                {
-                    Console.WriteLine("How to fix? -");
-                }
+                    Console.WriteLine(filePath);
+                    Console.WriteLine("resharper:");
+                    Console.WriteLine("What? " + error);
+                    Console.WriteLine("When? -");
+                    Console.WriteLine("Where? File, line");
+                    Console.WriteLine("Who? -");
+                    Console.WriteLine("Why? -");
 
-                Console.WriteLine();
+                    if (inspectionsWithFixes.Where((a) => error.ToLower().Contains(a.ToLower())).Count() > 0)
+                    {
+                        Console.WriteLine("How to fix? Solution provided.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("How to fix? -");
+                    }
 
+                    Console.WriteLine();
+                }
                 line = sr.ReadLine();
             }
             sr.Close();
