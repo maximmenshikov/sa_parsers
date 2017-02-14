@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "resharper_parser", "resharp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "error_reviewer", "error_reviewer\error_reviewer.csproj", "{AD973036-6683-4353-91B7-521BCB6D9485}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "report_calc", "report_calc\report_calc.csproj", "{8C247E9D-35A5-476C-933F-6DD53169BC08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -33,6 +35,10 @@ Global
 		{33D4585C-B2C9-466D-BE42-E29EC32B096B}.Debug|x86.Build.0 = Debug|x86
 		{33D4585C-B2C9-466D-BE42-E29EC32B096B}.Release|x86.ActiveCfg = Release|x86
 		{33D4585C-B2C9-466D-BE42-E29EC32B096B}.Release|x86.Build.0 = Release|x86
+		{8C247E9D-35A5-476C-933F-6DD53169BC08}.Debug|x86.ActiveCfg = Debug|x86
+		{8C247E9D-35A5-476C-933F-6DD53169BC08}.Debug|x86.Build.0 = Debug|x86
+		{8C247E9D-35A5-476C-933F-6DD53169BC08}.Release|x86.ActiveCfg = Release|x86
+		{8C247E9D-35A5-476C-933F-6DD53169BC08}.Release|x86.Build.0 = Release|x86
 		{AD973036-6683-4353-91B7-521BCB6D9485}.Debug|x86.ActiveCfg = Debug|x86
 		{AD973036-6683-4353-91B7-521BCB6D9485}.Debug|x86.Build.0 = Debug|x86
 		{AD973036-6683-4353-91B7-521BCB6D9485}.Release|x86.ActiveCfg = Release|x86
