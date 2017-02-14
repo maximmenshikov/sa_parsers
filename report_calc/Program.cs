@@ -146,6 +146,7 @@ namespace report_calc
                 Console.WriteLine("TP: " + tp + " / " + errorLines.Where((a) => a.Value.True).Count());
                 Console.WriteLine("FP: " + fp + " / " + errorLines.Where((a) => !a.Value.True).Count());
                 Console.WriteLine("TP/(TP + FP): " + Math.Round(tp / (tp + fp) * 100, 2) + "%");
+                Console.WriteLine();
             }
             sr.Close();
 		}
