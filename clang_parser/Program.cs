@@ -88,6 +88,7 @@ namespace clang_parser
                     Console.WriteLine("When? -");
                 }
                 Console.WriteLine("Where? File " + getDataUnderTag(ref lines, "FILENAME") + ", line " + getDataUnderTag(ref lines, "BUGLINE"));
+                Console.WriteLine("Who? -");
                 Console.WriteLine("Why? " + getDataUnderTag(ref lines, "BUGDESC"));
                 Console.WriteLine("How to fix? -");
                 Console.WriteLine();
