@@ -169,14 +169,6 @@ namespace report_calc
                         Console.Error.WriteLine(/*"F1: " + */f1);
                         Console.Error.WriteLine();
                     }
-
-                   
-                    //Console.WriteLine("TP: " + tpi + "(" + tp + ") / " + realTrue);
-                    //Console.WriteLine("FP: " + fpi + "(" + fp + ") / " + realFalse);
-                    //Console.WriteLine("Precision: " + precision);
-                    //Console.WriteLine("Recall: " + recall);
-                    //Console.WriteLine("TP/(TP + FP): " + Math.Round(tp / (tp + fp) * 100, 2) + "%");
-                    //Console.WriteLine();
                 }
             }
 
