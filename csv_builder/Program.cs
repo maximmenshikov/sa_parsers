@@ -72,10 +72,13 @@ namespace csv_builder
             var parsers = new List<string>() { "Clang", "Cppcheck", "Frama-C", "PVS" };
             Console.WriteLine("Quality");
             OutputCSVLines(ref qualities, ref parsers);
+            Console.WriteLine("");
             Console.WriteLine("Precision");
             OutputCSVLines(ref precisions, ref parsers);
+            Console.WriteLine("");
             Console.WriteLine("Recall");
             OutputCSVLines(ref recalls, ref parsers);
+            Console.WriteLine("");
             Console.WriteLine("F1");
             OutputCSVLines(ref f1s, ref parsers);
 
