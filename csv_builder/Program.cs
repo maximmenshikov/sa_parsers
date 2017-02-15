@@ -6,6 +6,23 @@ namespace csv_builder
 {
     class MainClass
     {
+        private static void OutputCSVLines(ref Dictionary<string, SortedDictionary<string, double>> dict, ref List<string> parsers)
+        {
+            foreach (var file in dict.Keys)
+            {
+                var s = file + ",";
+                foreach (var parser in parsers)
+                {
+                    s += ",";
+                    if (dict[file].ContainsKey(parser))
+                    {
+                        s += dict[file][parser];
+                    }
+                }
+                Console.WriteLine(s);
+            }
+        }
+
         public static void Main(string[] args)
         {
             if (args.Length < 1)
@@ -50,27 +67,19 @@ namespace csv_builder
                 recalls[file].Add(currentUtilityName, recall);
                 f1s[file].Add(currentUtilityName, f1);
             }
-                
-            foreach (var file in qualities.Keys)
-            {
-                var s = file + ",";
-                foreach (var v in qualities[file])
-                {
-                    s += "," + v.Value;
-                }
-                foreach (var v in precisions[file])
-                {
-                    s += "," + v.Value;
-                }
-                foreach (var v in recalls[file])
-                {
-                    s += "," + v.Value;
-                }
-                foreach (var v in f1s[file])
-                {
-                    s += "," + v.Value;
-                }
-            }
+            sr.Close();
+
+            var parsers = new List<string>() { "Clang", "Cppcheck", "Frama-C", "PVS" };
+            Console.WriteLine("Quality");
+            OutputCSVLines(ref qualities, ref parsers);
+            Console.WriteLine("Precision");
+            OutputCSVLines(ref precisions, ref parsers);
+            Console.WriteLine("Recall");
+            OutputCSVLines(ref recalls, ref parsers);
+            Console.WriteLine("F1");
+            OutputCSVLines(ref f1s, ref parsers);
+
+
         }
     }
 }
