@@ -141,14 +141,22 @@ namespace report_calc
 
             if (!incomplete)
             {
-                var tp = errorLines.Where((a) => a.Value.True).Select((a) => a.Value.Calculate(ref weights)).Sum();
-                var tp_old = errorLines.Where((a) => a.Value.True).Select((a) => a.Value.Calculate(ref weights)).Where((a) => a > 0.0).Count();
+                double tpi = errorLines.Where((a) => a.Value.True).Select((a) => a.Value.Calculate(ref weights)).Sum();
+                double tp = errorLines.Where((a) => a.Value.True).Select((a) => a.Value.Calculate(ref weights)).Where((a) => a > 0.0).Count();
 
-                var fp = errorLines.Where((a) => !a.Value.True).Select((a) => a.Value.Calculate(ref weights)).Sum();
-                var fp_old = errorLines.Where((a) => !a.Value.True).Select((a) => a.Value.Calculate(ref weights)).Where((a) => a > 0.0).Count();
+                double fpi = errorLines.Where((a) => !a.Value.True).Select((a) => a.Value.Calculate(ref weights)).Sum();
+                double fp = errorLines.Where((a) => !a.Value.True).Select((a) => a.Value.Calculate(ref weights)).Where((a) => a > 0.0).Count();
 
-                Console.WriteLine("TP: " + tp + "(" + tp_old + ") / " + errorLines.Where((a) => a.Value.True).Count());
-                Console.WriteLine("FP: " + fp + "(" + fp_old + ") / " + errorLines.Where((a) => !a.Value.True).Count());
+                var realTrue = errorLines.Where((a) => a.Value.True).Count();
+                var realFalse = errorLines.Where((a) => !a.Value.True).Count();
+
+                var fn = realTrue - tp;
+                double precision = tp / (tp + fp);
+                double recall = tp / (tp + fn);
+                Console.WriteLine("TP: " + tpi + "(" + tp + ") / " + realTrue);
+                Console.WriteLine("FP: " + fpi + "(" + fp + ") / " + realFalse);
+                Console.WriteLine("Precision: " + precision);
+                Console.WriteLine("Recall: " + recall);
                 Console.WriteLine("TP/(TP + FP): " + Math.Round(tp / (tp + fp) * 100, 2) + "%");
                 Console.WriteLine();
             }
