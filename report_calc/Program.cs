@@ -141,6 +141,47 @@ namespace report_calc
 
             if (!incomplete)
             {
+                var errorLinesByFile = errorLines.GroupBy((a) => Path.GetFileName(a.Key).Substring(0, Path.GetFileName(a.Key).IndexOf(":")));
+                foreach (var el in errorLinesByFile)
+                {   
+                    var tmpLines = el.ToList();
+                   
+                    double tpi = tmpLines.Where((a) => a.Value.True).Select((a) => a.Value.Calculate(ref weights)).Sum();
+                    double tp = tmpLines.Where((a) => a.Value.True).Select((a) => a.Value.Calculate(ref weights)).Where((a) => a > 0.0).Count();
+
+                    double fpi = tmpLines.Where((a) => !a.Value.True).Select((a) => a.Value.Calculate(ref weights)).Sum();
+                    double fp = tmpLines.Where((a) => !a.Value.True).Select((a) => a.Value.Calculate(ref weights)).Where((a) => a > 0.0).Count();
+
+                    var realTrue = tmpLines.Where((a) => a.Value.True).Count();
+                    var realFalse = tmpLines.Where((a) => !a.Value.True).Count();
+
+                    var fn = realTrue - tp;
+                    double precision = tp / (tp + fp);
+                    double recall = tp / (tp + fn);
+                    double f1 = 2 * precision * recall / (precision + recall);
+
+                    if (tpi > 0)
+                    {
+                        Console.Error.WriteLine(el.Key);
+                        Console.Error.WriteLine(/*"Quality: " + */(tpi / tp));
+                        Console.Error.WriteLine(/*"Precision: " + */precision);
+                        Console.Error.WriteLine(/*"Recall: " + */recall);
+                        Console.Error.WriteLine(/*"F1: " + */f1);
+                        Console.Error.WriteLine();
+                    }
+
+                   
+                    //Console.WriteLine("TP: " + tpi + "(" + tp + ") / " + realTrue);
+                    //Console.WriteLine("FP: " + fpi + "(" + fp + ") / " + realFalse);
+                    //Console.WriteLine("Precision: " + precision);
+                    //Console.WriteLine("Recall: " + recall);
+                    //Console.WriteLine("TP/(TP + FP): " + Math.Round(tp / (tp + fp) * 100, 2) + "%");
+                    //Console.WriteLine();
+                }
+            }
+
+            if (!incomplete)
+            {
                 double tpi = errorLines.Where((a) => a.Value.True).Select((a) => a.Value.Calculate(ref weights)).Sum();
                 double tp = errorLines.Where((a) => a.Value.True).Select((a) => a.Value.Calculate(ref weights)).Where((a) => a > 0.0).Count();
 
@@ -153,10 +194,13 @@ namespace report_calc
                 var fn = realTrue - tp;
                 double precision = tp / (tp + fp);
                 double recall = tp / (tp + fn);
+                double f1 = 2 * precision * recall / (precision + recall);
+                Console.WriteLine("Quality: " + (tpi / tp));
                 Console.WriteLine("TP: " + tpi + "(" + tp + ") / " + realTrue);
                 Console.WriteLine("FP: " + fpi + "(" + fp + ") / " + realFalse);
                 Console.WriteLine("Precision: " + precision);
                 Console.WriteLine("Recall: " + recall);
+                Console.WriteLine("F1: " + f1);
                 Console.WriteLine("TP/(TP + FP): " + Math.Round(tp / (tp + fp) * 100, 2) + "%");
                 Console.WriteLine();
             }
