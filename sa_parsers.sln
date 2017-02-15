@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "error_reviewer", "error_rev
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "report_calc", "report_calc\report_calc.csproj", "{8C247E9D-35A5-476C-933F-6DD53169BC08}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csv_builder", "csv_builder\csv_builder.csproj", "{F10B98B0-9842-4EDA-847E-E7B58891D21C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -55,5 +57,9 @@ Global
 		{EF5C589D-5C8C-4BDE-9B1D-465EAF3F941D}.Debug|x86.Build.0 = Debug|x86
 		{EF5C589D-5C8C-4BDE-9B1D-465EAF3F941D}.Release|x86.ActiveCfg = Release|x86
 		{EF5C589D-5C8C-4BDE-9B1D-465EAF3F941D}.Release|x86.Build.0 = Release|x86
+		{F10B98B0-9842-4EDA-847E-E7B58891D21C}.Debug|x86.ActiveCfg = Debug|x86
+		{F10B98B0-9842-4EDA-847E-E7B58891D21C}.Debug|x86.Build.0 = Debug|x86
+		{F10B98B0-9842-4EDA-847E-E7B58891D21C}.Release|x86.ActiveCfg = Release|x86
+		{F10B98B0-9842-4EDA-847E-E7B58891D21C}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 EndGlobal
